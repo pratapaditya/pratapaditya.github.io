@@ -42,12 +42,7 @@ p{
  	min-width: 100%;
 }
 .dots{display:none}
-@media (max-width: 768px) { .slide{
-min-width: 100%;
-}	
-#scrollPointTxt,#scrollPoint,.contact-social{display:none}
-.dots{display:block}
-}
+
 
 .slide::after{
 	/* counter-increment: item; */
@@ -112,7 +107,7 @@ div.donate p{
 }
 nav.side-navbar .site__footer
 {
-	display:block;
+	
 }
 nav.side-navbar.shrinked .site__footer
 {
@@ -358,4 +353,16 @@ overflow:auto;position: fixed;
 .mobile ul.list-unstyled {
 	text-align:left;
 	font-size:12px
+}
+
+@media (max-width: 768px) { 
+.slide{
+min-width: 100%;
+}	
+#scrollPointTxt,
+#scrollPoint,
+#socialmain,
+.site__footer{display:none}
+
+.dots{display:block}
 }
