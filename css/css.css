@@ -15,12 +15,12 @@ html{
 	flex-wrap: nowrap;
 	scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-  overflow: auto;
+  overflow: scroll;
 	height: 100%;
 	
 }
 p{
-	    font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 14px;
     color: #545454;
