@@ -15,9 +15,9 @@ html{
 	flex-wrap: nowrap;
 	scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-  overflow: scroll;
+  overflow: auto;
 	height: 100%;
-	background:red
+	
 	
 }
 p{
