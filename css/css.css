@@ -20,6 +20,7 @@ html{
 	
 	
 }
+.margin-top100{ margin-top: 100px;}
 p{
 	font-family: 'Roboto', sans-serif;
     font-weight: 400;
@@ -366,3 +367,5 @@ min-width: 100%;
 
 .dots{display:block}
 }
+
+
