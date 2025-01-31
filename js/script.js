@@ -200,7 +200,7 @@ var dateObj = new Date();
 
     $(".datetxt").html(newdate);
 	
-	console.log($('#body1').width());
+	//console.log($('#body1').width());
 	// $('#body1').scroll(function(){
     // var $this = $(this),
         // scrollPercentage = 100 * $this.scrollLeft() / ($this.width()-$('.slide').width());
@@ -254,6 +254,35 @@ function isScrolledIntoView(elem){
 // });	
 // });
 
+$(document).ready(function() {
+
+		//dom elements
+		var $homeLinks = $("a[href^='#']"),
+		$body = $("html, body");
+
+		//settings	
+		var settings = {
+			navOffset : 55,
+			scrollTime : 1000
+		};
+
+		//events
+		$homeLinks.on("click", clickOnHomeLinks);
+
+		//function
+		function clickOnHomeLinks(e) {
+			var $this = $(this),
+			target = $this.attr("href");
+			
+			if (num > 0) 
+			($('#body1').scrollLeft($(target).offset().left));
+			else ($('#body1').scrollRight($(target).offset().right));
+		
+			
+		};
+
+	});
+	
 
 $(window).on('load', function(){ // makes sure the whole site is loaded
 $('#status').fadeOut(); // will first fade out the loading animation
