@@ -274,7 +274,7 @@ $(document).ready(function() {
 			var $this = $(this),
 			target = $this.attr("href");
 			
-			if (num > 0) 
+			if ($(target).offset().left > 0) 
 			($('#body1').scrollLeft($(target).offset().left));
 			else ($('#body1').scrollRight($(target).offset().right));
 		
