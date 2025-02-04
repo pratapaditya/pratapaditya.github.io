@@ -334,6 +334,10 @@ overflow:auto;position: fixed;
 	border-top:6px solid #796aee;
 	color:#796aee;
 }
+.ux .card-header{
+	border-top:6px solid #0097d7;
+	color:#0097d7;
+}
 
 
 .mobile .card-header{
@@ -419,3 +423,11 @@ cursor: pointer;
 			background-size: cover;
 			margin:-10px 0 0 -36px; /* is width and height divided by two */
 		}
+
+
+.about-company{
+
+color: #607d8b;
+    font-style: italic;
+
+}
