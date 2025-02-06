@@ -276,7 +276,7 @@ $(document).ready(function() {
 			
 			if ($(target).offset().left > 0) 
 			($('#body1').scrollLeft($(target).offset().left));
-			else ($('#body1').scrollRight($(target).offset().right));
+			else ($('#body1').scrollLeft($(target).offset().right));
 		
 			
 		};
