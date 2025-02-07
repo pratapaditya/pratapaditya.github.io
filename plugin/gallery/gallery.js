@@ -41,7 +41,7 @@ AutoWidth = 0;
 topVar = 0;
 leftVar = 0;
 array = [30];
-
+className="";
 $(document).ready(function(){
 
   for(i=0;i<=30;i++){
