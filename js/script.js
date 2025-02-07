@@ -306,9 +306,9 @@ $(document).ready(function() {
 
   var options = {
     index: $(this).index(),
-    resizable: false,
-    initMaximized: true,
-    headerToolbar: ['close'],
+   // resizable: false,
+  //  initMaximized: true,
+   // headerToolbar: ['close'],
   };
 
   new PhotoViewer(items, options);
