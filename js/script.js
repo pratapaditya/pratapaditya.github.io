@@ -290,15 +290,32 @@ $('#preloader').delay(50).fadeOut(100); // will fade out the white DIV that cove
 $('body').delay(50).css({'overflow':'visible'});
 })
 
-
+//Gallery
 $(document).ready(function() {
-  setGalleryTransition("slideAndZoom");
-            enableExtraButtons();
-           
-            json = '{ "Entry": { "Title": "", '+
-               '"Image": ["",'+       
-               '"" ] } }';
-           addGallery(json);
-           json = '{ "Entry": { "Title": "",  "Image": ["", "" ] } }';
-           addGallery(json);
+ // initialize manually with a list of links
+ $('.image-set a.gallery').click(function (e) {
+    
+  e.preventDefault();
+
+  var items = $('.image-set a.gallery').get().map(function (el) {
+    return {
+      src: $(el).attr('href'),
+      title: $(el).attr('data-title')
+    }
+  });
+
+  var options = {
+    index: $(this).index(),
+    resizable: false,
+    initMaximized: true,
+    headerToolbar: ['close'],
+  };
+
+  new PhotoViewer(items, options);
+
+});
+
+
+
+
 		   });
