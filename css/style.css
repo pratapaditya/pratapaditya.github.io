@@ -628,6 +628,12 @@ a.totop-link {
     left: 0;
     top: 0
 }
+.about .resumeQR{
+    height:50px;
+    width:50px;
+    border:1px;
+    position:static
+}
 .about-con {
     width: 60%
 }
@@ -806,8 +812,8 @@ a.totop-link {
     -o-transition-duration: .2s;
 }
 .experience-details:hover i {
-    font-size: 73px;
-    color: #000;
+    
+    color: #ffb400;
 }
 .experience-details:hover .col-3 {
     width: 29%;
