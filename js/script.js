@@ -257,7 +257,7 @@ function isScrolledIntoView(elem){
 $(document).ready(function() {
 
 		//dom elements
-		var $homeLinks = $("a[href^='#']"),
+		var $homeLinks = $("a[href^='#'].menuLink"),
 		$body = $("html, body");
 
 		//settings	
