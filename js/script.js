@@ -319,3 +319,26 @@ $(document).ready(function() {
 
 
 		   });
+
+       $(document).ready(function() {
+       //Model PDF
+       // We have set the type to module so that we make sure that the script is executed after the other modules have been loaded
+    var { pdfjsLib } = globalThis;
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.0.379/pdf.worker.mjs';
+   
+	 $("#cheers_pdfView_1,#cheers_pdfView_2,#cheers_pdfView_3,#cheers_pdfView_4,#secure_pdfView_1,#secure_pdfView_2,#sns_pdfView_1").animatedModal();
+    });
+    function loadPDF(url){
+      let pdfViewer = new PDFjsViewer($('.pdfjs-viewer'));
+        pdfViewer.loadDocument(url).then(function() {
+         
+     pdfViewer.setZoom("fit");
+      });
+      window.pdfViewer = pdfViewer;
+      window.printDoc = function() {
+          pdfViewer.pdf.getData().then(function(data) {
+              let b64Pdf=btoa(String.fromCharCode.apply(null, data));
+              printJS({printable: b64Pdf, type: 'pdf', base64: true});
+         });
+      }
+    }
