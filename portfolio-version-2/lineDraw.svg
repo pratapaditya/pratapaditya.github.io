@@ -1,0 +1,29 @@
+<svg width="500" height="150" viewBox="0 0 500 150" xmlns="http://www.w3.org/2000/svg">
+  <!-- Longer, thinner line -->
+  <line x1="40" y1="100" x2="460" y2="100"
+        stroke="#333" stroke-width="1"
+        stroke-dasharray="420" stroke-dashoffset="420">
+    <animate attributeName="stroke-dashoffset" from="420" to="0"
+             dur="2s" fill="freeze" />
+  </line>
+
+  <!-- Pen moving along the line -->
+  <g>
+    <!-- Move pen tip along the line -->
+    <animateTransform attributeName="transform"
+                      type="translate"
+                      from="40 100"
+                      to="460 100"
+                      dur="2s"
+                      fill="freeze" />
+
+    <!-- Pen, slightly above line -->
+    <g transform="translate(0, -28) rotate(-45)">
+      <!-- Pen body (yellow) -->
+      <rect x="-28" y="-3" width="28" height="6" rx="2" ry="2" fill="#FFD700" />
+      <!-- Pen tip -->
+      <polygon points="-28,-3 -36,0 -28,3" fill="#222" />
+      <circle cx="-36" cy="0" r="1.5" fill="#000" />
+    </g>
+  </g>
+</svg>
